@@ -1,0 +1,5 @@
+com\store\store\model\ClientsBean.class
+com\store\store\StoreApplication.class
+com\store\store\controller\ProductsController.class
+com\store\store\repositories\ProductsRepository.class
+com\store\store\model\ProductsBean.class
