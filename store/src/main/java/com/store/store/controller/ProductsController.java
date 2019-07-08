@@ -20,13 +20,21 @@ public class ProductsController {
     @GetMapping("/")
     public ResponseEntity<List<ProductsBean>> getProducts() {
 
-        return new ResponseEntity<List<ProductsBean>>((List<ProductsBean>) productsRepository.findAll(), HttpStatus.OK);
+        return new ResponseEntity<>((List<ProductsBean>) productsRepository.findAll(), HttpStatus.OK);
     }
-
     @PostMapping("/")
     public ResponseEntity<Void> postProduct(@RequestBody ProductsBean product) {
-
+        productsRepository.save(product);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
+    @GetMapping("/{id}")
+    public ResponseEntity<ProductsBean> getProduct(@PathVariable("id") String id){
+        return new ResponseEntity<>(productsRepository.findById(id).get(),HttpStatus.OK);
+    }
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> updateProduct(@PathVariable("id") String id, @RequestBody ProductsBean productsBean){
+        productsBean.setId(id);
+        productsRepository.save(productsBean);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
