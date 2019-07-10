@@ -1,5 +1,9 @@
-C:\Users\pkammerer\Desktop\Allianz\Project\store\src\main\java\com\store\store\StoreApplication.java
-C:\Users\pkammerer\Desktop\Allianz\Project\store\src\main\java\com\store\store\repositories\ProductsRepository.java
-C:\Users\pkammerer\Desktop\Allianz\Project\store\src\main\java\com\store\store\model\ProductsBean.java
-C:\Users\pkammerer\Desktop\Allianz\Project\store\src\main\java\com\store\store\controller\ProductsController.java
-C:\Users\pkammerer\Desktop\Allianz\Project\store\src\main\java\com\store\store\model\ClientsBean.java
+/home/usuario/Escritorio/store/src/main/java/com/store/store/repositories/ProductsRepository.java
+/home/usuario/Escritorio/store/src/main/java/com/store/store/controller/ClienteController.java
+/home/usuario/Escritorio/store/src/main/java/com/store/store/controller/ProductsController.java
+/home/usuario/Escritorio/store/src/main/java/com/store/store/model/ProductsBean.java
+/home/usuario/Escritorio/store/src/main/java/com/store/store/repositories/ClientsRepository.java
+/home/usuario/Escritorio/store/src/main/java/com/store/store/model/LoginBean.java
+/home/usuario/Escritorio/store/src/main/java/com/store/store/org/springframework/security/samples/config/SecurityConfig.java
+/home/usuario/Escritorio/store/src/main/java/com/store/store/model/ClientsBean.java
+/home/usuario/Escritorio/store/src/main/java/com/store/store/StoreApplication.java

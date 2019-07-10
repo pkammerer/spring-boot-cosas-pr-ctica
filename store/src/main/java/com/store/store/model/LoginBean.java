@@ -4,15 +4,6 @@ public class LoginBean {
 
     private String user;
     private String pssw;
-    private String newPssw;
-
-    public String getNewPssw() {
-        return newPssw;
-    }
-
-    public void setNewPssw(String newPssw) {
-        this.newPssw = newPssw;
-    }
 
     public String getUser() {
         return user;

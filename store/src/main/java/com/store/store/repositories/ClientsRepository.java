@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface ClientsRepository extends CrudRepository<ClientsBean,String> {
 
 
-    ClientsBean findByUser(String s);
+    ClientsBean findByUsername(String s);
 }

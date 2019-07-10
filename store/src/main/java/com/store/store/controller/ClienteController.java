@@ -14,7 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
-
+@CrossOrigin(origins="*")
 @RestController
 @RequestMapping("/cliente")
 public class ClienteController {
@@ -25,11 +25,18 @@ public class ClienteController {
     @PostMapping("/login")
     public ResponseEntity<ClientsBean> login(@RequestBody LoginBean loginBean) {
 
-        ClientsBean client = clientsRepository.findByUser(loginBean.getUser());
-        if (loginBean.getPssw().equals(client.getPssw()))
-            return new ResponseEntity<ClientsBean>(client, HttpStatus.OK);
+        ClientsBean client = clientsRepository.findByUsername(loginBean.getUser());
+        if (loginBean.getPssw().equals(client.getPassword()))
+            return new ResponseEntity<>(client, HttpStatus.OK);
 
         return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+    }
+    
+    @GetMapping("/{id}")
+    public ResponseEntity<ClientsBean> getCliente(@PathVariable("id") String id){
+    	System.out.println("AAAAAAAAA");
+    	return new ResponseEntity<ClientsBean>(clientsRepository.findById(id).get(),HttpStatus.OK);
+    	
     }
 
 
@@ -57,6 +64,8 @@ public class ClienteController {
     @PostMapping("/")
     public ResponseEntity<Void> insertClient(@RequestBody ClientsBean clientsBean){
         try{
+        	System.out.println("AAAAAAA");
+
             clientsRepository.save(clientsBean);
         }catch(Exception e){
             e.printStackTrace();
@@ -69,7 +78,7 @@ public class ClienteController {
     public ResponseEntity<Void> updatePassword(@RequestBody LoginBean loginBean){
         try{
             ClientsBean clientsBean = clientsRepository.findById(loginBean.getUser()).get();
-            clientsBean.setPssw(loginBean.getPssw());
+            clientsBean.setPassword(loginBean.getPssw());
             clientsRepository.save(clientsBean);
         }catch(Exception e){
             e.printStackTrace();
