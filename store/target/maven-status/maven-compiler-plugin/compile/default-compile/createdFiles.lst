@@ -1,5 +1,10 @@
-com\store\store\model\ClientsBean.class
-com\store\store\StoreApplication.class
-com\store\store\controller\ProductsController.class
-com\store\store\repositories\ProductsRepository.class
-com\store\store\model\ProductsBean.class
+com/store/store/model/RolBean.class
+com/store/store/controller/ProductsController.class
+com/store/store/StoreApplication.class
+com/store/store/model/ProductsBean.class
+com/store/store/util/Constantes.class
+com/store/store/model/LoginBean.class
+com/store/store/controller/ClienteController.class
+com/store/store/model/ClientsBean.class
+com/store/store/repositories/ClientsRepository.class
+com/store/store/repositories/ProductsRepository.class
